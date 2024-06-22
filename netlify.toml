@@ -14,7 +14,7 @@
       "mkdir -p master-dist/Clock && mv Clock/dist/* master-dist/Clock/",
       "mkdir -p master-dist/Drum-machine && mv Drum-machine/dist/* master-dist/Drum-machine/",
       "mkdir -p master-dist/Js-calculator && mv Js-calculator/dist/* master-dist/Js-calculator/",
-      "mkdir -p master-dist/Markdown-previewer && mv Markdown-previewer/dist/* master-dist/Markdown-previewer/"
+      "mkdir -p master-dist/Markdown-previewer && mv Markdown-previewer/dist/* master-dist/Markdown-previewer/",
       "mkdir -p master-dist/Random-quote-machine && mv Random-quote-machine/dist/* master-dist/Random-quote-machine/"
     ]
 
