@@ -1,0 +1,45 @@
+[build]
+  publish = "master-dist"
+
+[[plugins]]
+  package = "@netlify/plugin-run-script"
+
+  [plugins.inputs]
+    commands = [
+      "pnpm install --prefix Clock && pnpm run build --prefix Clock",
+      "pnpm install --prefix Drum-machine && pnpm run build --prefix Drum-machine",
+      "pnpm install --prefix Js-calculator && pnpm run build --prefix Js-calculator",
+      "pnpm install --prefix Markdown-previewer && pnpm run build --prefix Markdown-previewer",
+      "pnpm install --prefix Random-quote-machine && pnpm run build --prefix Random-quote-machine",
+      "mkdir -p master-dist/Clock && mv Clock/dist/* master-dist/Clock/",
+      "mkdir -p master-dist/Drum-machine && mv Drum-machine/dist/* master-dist/Drum-machine/",
+      "mkdir -p master-dist/Js-calculator && mv Js-calculator/dist/* master-dist/Js-calculator/",
+      "mkdir -p master-dist/Markdown-previewer && mv Markdown-previewer/dist/* master-dist/Markdown-previewer/"
+      "mkdir -p master-dist/Random-quote-machine && mv Random-quote-machine/dist/* master-dist/Random-quote-machine/"
+    ]
+
+
+[[redirects]]
+from = "/clock/*"
+to = "/master-dist/Clock/index.html"
+status = 200
+
+[[redirects]]
+from = "/drum-machine/*"
+to = "/master-dist/Drum-machine/index.html"
+status = 200
+
+[[redirects]]
+from = "/js-calculator/*"
+to = "/master-dist/Js-calculator/index.html"
+status = 200
+
+[[redirects]]
+from = "/markdown-previewer/*"
+to = "/master-dist/Markdown-previewer/index.html"
+status = 200
+
+[[redirects]]
+from = "/random-quote-machine/*"
+to = "/master-dist/Random-quote-machine/index.html"
+status = 200
