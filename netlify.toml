@@ -1,3 +1,6 @@
+[build]
+  publish = "master-dist"
+
 [[redirects]]
 from = "/clock/*"
 to = "/master-dist/Clock/index.html"
