@@ -1,18 +1,3 @@
-[build]
-  publish = "master-dist"
-  command = """
-    cd Clock && pnpm install && pnpm run build && cd ..
-    cd Drum-machine && pnpm install && pnpm run build && cd ..
-    cd Js-calculator && pnpm install && pnpm run build && cd ..
-    cd Markdown-previewer && pnpm install && pnpm run build && cd ..
-    cd Random-quote-machine && pnpm install && pnpm run build && cd ..
-    mkdir -p master-dist/Clock && mv Clock/dist/* master-dist/Clock/ &&
-    mkdir -p master-dist/Drum-machine && mv Drum-machine/dist/* master-dist/Drum-machine/ &&
-    mkdir -p master-dist/Js-calculator && mv Js-calculator/dist/* master-dist/Js-calculator/ &&
-    mkdir -p master-dist/Markdown-previewer && mv Markdown-previewer/dist/* master-dist/Markdown-previewer/ &&
-    mkdir -p master-dist/Random-quote-machine && mv Random-quote-machine/dist/* master-dist/Random-quote-machine/
-  """
-
 [[redirects]]
 from = "/clock/*"
 to = "/master-dist/Clock/index.html"

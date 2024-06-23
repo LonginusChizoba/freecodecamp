@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "project-forge": "^1.0.3",
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build":"ts-node projectBuilder"
+  }
+}
