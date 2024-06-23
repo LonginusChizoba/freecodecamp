@@ -1,11 +1,11 @@
 [build]
   publish = "master-dist"
   command = """
-    pnpm install --prefix Clock && pnpm run build --prefix Clock &&
-    pnpm install --prefix Drum-machine && pnpm run build --prefix Drum-machine &&
-    pnpm install --prefix Js-calculator && pnpm run build --prefix Js-calculator &&
-    pnpm install --prefix Markdown-previewer && pnpm run build --prefix Markdown-previewer &&
-    pnpm install --prefix Random-quote-machine && pnpm run build --prefix Random-quote-machine &&
+    cd Clock && pnpm install && pnpm run build && cd ..
+    cd Drum-machine && pnpm install && pnpm run build && cd ..
+    cd Js-calculator && pnpm install && pnpm run build && cd ..
+    cd Markdown-previewer && pnpm install && pnpm run build && cd ..
+    cd Random-quote-machine && pnpm install && pnpm run build && cd ..
     mkdir -p master-dist/Clock && mv Clock/dist/* master-dist/Clock/ &&
     mkdir -p master-dist/Drum-machine && mv Drum-machine/dist/* master-dist/Drum-machine/ &&
     mkdir -p master-dist/Js-calculator && mv Js-calculator/dist/* master-dist/Js-calculator/ &&
